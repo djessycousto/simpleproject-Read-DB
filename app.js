@@ -44,7 +44,7 @@ app.use(express.static("./public"));
 // careful with the endpoint position
 // app.use("/auth", authRouter); // View-related routes
 app.use("/api/v1/auth", authRouter); // API-related routes
-app.use("/", blogRouterView); // View-related routes
+app.use("/blogs", blogRouterView); // View-related routes
 
 //API
 // app.use("/api/v1/auth", authRouter); // API-related routes
