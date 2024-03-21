@@ -1,0 +1,64 @@
+<%- include('./partials/nav.ejs') %>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: transparent;
+        }
+    </style>
+    </head>
+
+    <body>
+        <form class="signup">
+            <h2>Sign Up</h2>
+            <label for="username">Username:</label>
+            <input type="text" class="username-input" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" class="email-input" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" class="password-input" name="password" required>
+
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+
+        <div style="padding:10px"></div>
+
+
+
+        <%- include('./partials/footer.ejs') %>

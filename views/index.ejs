@@ -1,0 +1,164 @@
+<!-- nav -->
+<%- include('./partials/nav.ejs') %>
+    <!-- end-header  -->
+
+
+    <!-- ###### Hero #####  -->
+    <section class="hero">
+        <div class="hero-img-container">
+            <img src="./images/hero-covert.png" alt="" class="hero-img">
+            <div class="hero-text-container">
+                <h1>LOREM IPSUM</h1>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double
+                    click me to add your own content and make changes to the </p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ###### end Hero #####  -->
+    <!-- ###### Section #####  -->
+
+    <section class="section-one-main">
+        <div class="section-one">
+
+            <div class="sct-num-inc">
+                <span class="numb" data-value="8000"></span>
+                <p>I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    It's easy.
+                    I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    It's easy.</p>
+
+
+            </div>
+
+            <div class="sct-num-inc">
+                <span class="numb" data-value="400"></span>
+                <p>I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    It's easy.
+                    I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    It's easy. </p>
+
+
+            </div>
+
+            <div class="sct-num-inc">
+                <span class="numb" data-value="1000"></span>
+                <p>I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    It's easy.
+                    I'm a paragraph.
+                    Click here to add your own text and edit me.
+                    It's easy. </p>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ###### End of Section #####  -->
+
+
+
+    <!-- ###### Section 2 #####  -->
+    <section class="box-home section2-main">
+        <h1>Title</h1>
+
+        <div class="box-home-section-center section2-box-center">
+
+            <% const uniqueCombinations=new Set(); %>
+
+                <% blogs.forEach((data, index)=> { %>
+
+
+                    <% const combinationKey=`${data.image}_${data.bodyTitle}_${data.title}`; %>
+                        <% if (!uniqueCombinations.has(combinationKey)) { %>
+                            <% uniqueCombinations.add(combinationKey); %>
+
+                                <% if (index % 2===0) { %>
+                                    <!-- ... your left section HTML ... -->
+                                    <div class="box-home-container-right section2-container-left ">
+                                        <div class="container-text-image-left">
+                                            <div class="image-box-home-right image-container-left">
+                                                <img name="img" src="<%=data.image%>" alt=""
+                                                    class="img-home-2 img-sect2-left">
+                                            </div>
+                                            <div class="text-box-home-left">
+                                                <div class="vertical-text-left">
+                                                    <div>
+
+                                                    </div>
+                                                    <h2>Place holder text</h2>
+                                                </div>
+                                                <div class="normal-text-left ">
+                                                    <h4>
+                                                        <%=data.title %>
+                                                    </h4>
+                                                    <p>I'm a paragraph. Click here to add your own text and edit me.
+                                                        It's easy. </p>
+                                                    <a href="">Cta line </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <% } else { %>
+                                        <!-- ... your right section HTML ... -->
+                                        <div class="box-home-container-right section2-container-right ">
+                                            <div class="container-text-image-right">
+                                                <div class="image-box-home-right image-container-right">
+                                                    <img name="img img2" src="<%=data.image%>" alt=""
+                                                        class="img-home-2 img-sect2-right">
+                                                </div>
+                                                <div class="text-box-home-right">
+                                                    <div class="vertical-text-right">
+                                                        <div></div>
+                                                        <h2>Place holder text</h2>
+                                                    </div>
+                                                    <div class="normal-text-right ">
+                                                        <h4>
+                                                            <%=data.title %>
+                                                        </h4>
+                                                        <p>I'm a paragraph. Click here to add your own text and edit
+                                                            me. It's easy. </p>
+                                                        <a href="">Cta line </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                            <% } %>
+                                                <% }); %>
+
+
+
+
+
+
+
+                                                    <!-- right -->
+
+
+
+
+
+
+
+
+                                                    <!-- end right -->
+        </div>
+
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
