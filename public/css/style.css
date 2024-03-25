@@ -29,6 +29,10 @@ nav {
   font-size: 1.4rem;
 }
 
+.logoname a {
+  color: black;
+}
+
 /* humburger */
 
 .toggle-menu > span {
