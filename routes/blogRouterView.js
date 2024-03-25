@@ -37,12 +37,12 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.route("/").post(createBlog);
+router.route("/").get(getAllBlog);
+// router.route("/").post(createBlog);
 router.route("/upload").post(uploadPict); // need to edit picture name before saving
 router.route("/contact").post(sendEmail);
 
 // // GET all blogs, GET, PATCH, DELETE a single blog
-router.route("/").get(getAllBlog);
 router.route("/login").get(getAllBlog);
 router.route("/signUp").get(getAllBlog);
 // router.route("/dashboard").get(dash);
